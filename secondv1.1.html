@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<style>
+			.button {
+  				background-color:#0b0704;
+				  border: 2px solid #B88610;
+				  color: aliceblue;
+				  padding: 10px 25px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 10px;
+				  font-weight: bold;
+				  margin: 0px 0px;
+				  cursor: pointer;
+			}
+			.grad
+			{
+				border-radius: 7px;
+				background-color: #dcc242;
+				padding: 10px;
+				font-size: small;
+				font-weight: bold;
+				background-image: linear-gradient(to bottom,#f89b3a,#aa7324,#603A13);
+			}
+
+			h5{
+				color:#B88610; 
+			}
+			.input_box{
+				padding-left: 10px;
+				width:75%;
+				border:2px solid #B88610;
+				border-radius: 7px;
+
+			}
+			textarea {
+ 				 width: 100%;
+				 height: 100px;
+				 padding: 12px 20px;
+				 box-sizing: border-box;
+				 border: 2px solid #ccc;
+				 border-radius: 4px;
+				 background-color: #f8f8f8;
+				 font-size: 16px;
+				 resize: none;
+			}
+		</style>	
+		<script type="text/javascript">
+			function WriteToFile(passForm) {
+				 
+				    set fso = CreateObject("Scripting.FileSystemObject"); 
+				    set s   = fso.CreateTextFile("/home/ishaan/html/abc.txt", True);
+				 
+				    var firstName = document.getElementById('FirstName');
+				    var lastName  = document.getElementById('Number');
+				 
+				    s.writeline("First Name :" + Firstname);
+				    s.writeline("Last Name :" + number);
+				 
+				    s.writeline("-----------------------------");
+				    s.Close();
+				 }
+		</script>
+	</head>
+	<body style="background-image: url('wooden_1.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+		<div class="row">
+			<div class="col-1">
+				<button class="button">HOME</button>
+			</div>
+			<div class="col-1">
+				<button class="button" onclick="window.location.href='contact.html';">NEWS
+				</button>
+			</div>
+			<div class="col-1">
+				<button class="button">ABOUT</button>
+			</div>
+		</div>
+		<div class="row" style="margin: 35px;background-color: #0b0704;padding: 20px;color: aliceblue">
+			<div class="row" style="padding-left: 50px;font-size: 30;color:#B88610">INDIA</div>
+			<div class="row">
+				<div class="col-8">
+					<div class="row" style="padding-left: 225px;">
+						<img src="template.jpeg" width="250" height="250" style="border-radius: 7px;">
+					</div>
+					<div align="center" style="color: rebeccapurple;
+	    				padding-top: 25;">WELCOME</div>
+					<div align="left" style="padding-bottom: 50px;
+	    				padding-left: 0px;
+	    				padding-top: 25px;"><p>Know all about india,in this webpage you will come to know about some stuff regarding the metropolitian cities of India.As per constitution of india a metroopolotian
+	    				city is a city with population over ten lakhs.There are many metropolitian cities in India,here we will be discussing few of them</p></div>
+					<div class="row">
+						<div class="col" style="padding-left: 15px;border-right:0.5px dotted brown">
+							<h5>MUMBAI</h5>
+							<img src="mumbai.jpg" width="100" height="100" style="border-radius: 5px;">
+							<p align="justify">Mumbai, also known as Bombay, the official name until 1995) is the capital city of the Indian state of Maharashtra.</p>
+							<button class="grad">KNOW MORE</button>
+
+						</div>
+						<div class="col" style="border-right:0.5px dotted brown;">
+							<h5>DELHI</h5>
+							<img src="delhi.jpg" width="100" height="100" style="border-radius: 5px;">
+							<p align="justify">Delhi,officially the National Capital Territory of Delhi (NCT), is a city and a union territory of India containing New Delhi</p>
+							<button class="grad">KNOW MORE</button>
+						</div>
+						<div class="col">
+							<h5>BENGALURU</h5>
+							<img src="bengaluru.jpeg" width="100" height="100" style="border-radius: 7px;">
+							<p align="justify">Bangalore,known as Bengaluru is the capital city of Karnataka. It has a population of 10 million making it third most populous city</p> 
+							<button class="grad">KNOW MORE</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-4" style="border-left:0.5px dotted brown">
+					<div class="row" style="padding-left:30px;padding-bottom:25px;">
+						<img src="map.png" alt="map of india" width="150" height="150" style="border-radius: 7px;">
+					</div>
+					<div class="row" style="padding-left: 10px;padding-bottom: 5px;color:#B88610">CONTACT</div>
+					<div class="row" style="padding-left: 10px;padding-bottom:10px">
+						<p>124234567</p>
+					</div>
+					<div class="row" style="padding-left: 10px;padding-bottom:15px">
+						<p style="color: brown;"> 210 main st <br>
+						Eastman GA,304212</p>
+					</div>
+					<form onSubmit="WriteToFile(this)">
+						<label>First name:</label><br>
+						<input type="text" name="FirstName" id="firstName" size="20">
+						 <br>
+						<label>Number:</label><br>
+						<input type="number" name="number" id="Number" required size="20">
+						<br> 
+						<br>
+						<input type="submit" value="submit" class="grad">
+					</form><br>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

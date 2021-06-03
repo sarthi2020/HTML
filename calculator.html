@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script>
+			function add(){
+				xString=document.getElementById("x").value
+				yString=document.getElementById("y").value
+				x = parseInt(xString);
+				y = parseInt(yString);
+				document.getElementById('output').innerHTML=x+y;
+			}
+			function subtract(){
+				xString=document.getElementById("x").value
+				yString=document.getElementById("y").value
+				x = parseInt(xString);
+				y = parseInt(yString)
+				document.getElementById('output').innerHTML=x-y;
+			}
+			function multiply(){
+				xString=document.getElementById("x").value
+				yString=document.getElementById("y").value
+				x = parseInt(xString);
+				y = parseInt(yString)
+				document.getElementById('output').innerHTML=x*y;
+			}
+			function divide(){
+				xString=document.getElementById("x").value
+				yString=document.getElementById("y").value
+				x = parseInt(xString);
+				y = parseInt(yString)
+				document.getElementById('output').innerHTML=x/y;
+			}
+			function input(x){
+				if (document.getElementById('output').innerHTML==='0'){
+					document.getElementById('output').innerHTML=x
+				}
+				else{
+					document.getElementById('output').innerHTML+=x
+				}
+			}
+			function evaluate1(){
+				console.log("hello");
+				var x=document.getElementById('output').innerHTML;
+				var expression=eval(x);
+				console.log(expression);
+				document.getElementById('output').innerHTML=expression;
+			}
+		</script>
+		<style>
+			.padding_box{
+				padding: 10px;
+			}
+			.button{
+				border-radius: 5px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			CALCULATOR
+		</div>
+		<div class="row" style="padding-left:100px;">
+			<h2 id="output">0</h2>
+		</div>
+		<div class="row" style="padding-left: 250px;padding-top: 10px">
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input(7)">7</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" onclick="input(8)">8</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" onclick="input(9)">9</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input('+')" data-action="add">+</button>
+			</div>
+		</div>
+		<div class="row" style="padding-left: 250px;padding-top: 10px">
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input(4)">4</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" onclick="input(5)">5</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" onclick="input(6)">6</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input('-')">-</button>
+			</div>
+		</div>
+		<div class="row" style="padding-left: 250px;padding-top: 10px">
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input(1)">1</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" onclick="input(2)">2</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" onclick="input(3)">3</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input('*')">*</button>
+			</div>
+		</div>
+		<div class="row" style="padding-left: 250px;padding-top: 10px">
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input('.')">.</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" onclick="input(0)">0</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px;">
+				<button class="button" >del</button>
+			</div>
+			<div class="col-1" style="padding-top: 10px">
+				<button class="button" onclick="input('/')">/</button>
+			</div>
+		</div>
+		<div style="padding-left: 250px;padding-top: 20px;">
+			<button class="button" style="width: 50px" onclick="evaluate1();">&equals;</button>
+		</div>
+	</body>
+</html>
